@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.threepointsloader",                              
+  "displayName": "Three points loader",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "You package description",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_10_17_ThreePointsLoader.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
