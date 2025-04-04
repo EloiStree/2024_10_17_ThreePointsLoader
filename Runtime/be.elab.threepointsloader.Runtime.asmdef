@@ -4,7 +4,8 @@
     "references": [
         "be.elab.threepointscursor",
         "be.elab.threepointstag",
-        "be.elab.threepointsutility"
+        "be.elab.threepointsutility",
+        "be.elab.relocation"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
