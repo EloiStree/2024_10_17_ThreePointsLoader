@@ -771,6 +771,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea97fb01c6d58074d9618cc19a2f0448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1164230545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164230546}
+  - component: {fileID: 1164230547}
+  m_Layer: 0
+  m_Name: Goal Dont reload the room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164230546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164230545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26409265, y: -0.086900584, z: 0.2872449}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1164230547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164230545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849672d597e191b4b97d627be9ea4a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_note:
+    m_textNote: "L'objectif est de faire une facade qui permet \xE0 une personne
+      de bouger un niveau. Une fois bouger vous pouvez sauver le context du  niveau
+      en tethra save.\n\n(si il utiliser des holer, cela replace et puis sauvegerade)\n\n
+      Si le guardian et le context trop similaire, cela \xE9crase.\nSinon, \xE7a
+      aujoute un fichier de sauvegarde.\n\nQuand l'utilisateur recharge le niveau
+      ou si un replacement est d\xE9tect\xE9. On charge et reparcorus la liste des
+      tetra save \xE0 la rechche d'un context valide. Si c'est la cas, on replace
+      le niveau avec le guardian donn\xE9 (three ponits du guarddiant)"
+  m_checklistNote:
+    m_items:
+    - m_item: Savoir Sauver un TetraRay
+      m_isDone: 0
 --- !u!1 &1182089947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,3 +1610,4 @@ SceneRoots:
   - {fileID: 58631019347397296}
   - {fileID: 1486783466}
   - {fileID: 326927847}
+  - {fileID: 1164230546}

@@ -7,9 +7,9 @@ public class ThreePointsMono_ReloadTetraCoordinate : MonoBehaviour {
     public ThreePointsTriangleDefault m_triangle;
     public Transform m_whatToMove;
 
-    public STRUCT_TetrahedronLongSideFootCoordinateWithSource m_savedGiven;
+    public STRUCT_TetraRayLitWithWorld m_savedGiven;
 
-    public void SetWith(STRUCT_TetrahedronLongSideFootCoordinateWithSource input)
+    public void SetWith(STRUCT_TetraRayLitWithWorld input)
     {
         m_savedGiven = input;
         ThreePointsTriangleDefault triangle = new ThreePointsTriangleDefault(m_whereToApply);

@@ -1,4 +1,5 @@
 using Eloi.ThreePoints;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 public class ThreePointsMono_SaveCurrentContextTransformSleepyCode : MonoBehaviour
@@ -18,8 +19,8 @@ public class ThreePointsMono_SaveCurrentContextTransformSleepyCode : MonoBehavio
     public Quaternion localRotationOfPoint;
     public Vector3 localPositionOfPoint;
 
-    public STRUCT_TetrahedronLongSideFootCoordinateWithSource m_saved;
-    public UnityEvent<STRUCT_TetrahedronLongSideFootCoordinateWithSource> m_savedContext;
+    public STRUCT_TetraRayWithWorld m_saved;
+    public UnityEvent<STRUCT_TetraRayWithWorld> m_savedContext;
 
     public bool m_updateRefresh;
 
@@ -87,9 +88,23 @@ public class ThreePointsMono_SaveCurrentContextTransformSleepyCode : MonoBehavio
         m_saved.m_worldPointA = worldPointA;
         m_saved.m_worldPointB = worldPointB;
         m_saved.m_worldPointC = worldPointC;
-        m_saved.m_localPositionFromFoot = localPositionOfPoint;
-        m_saved.m_localRotationFromFoot = localRotationOfPoint;
+        m_saved.m_ray.m_localPositionFromFoot = localPositionOfPoint;
+        m_saved.m_ray.m_localRotationFromFoot = localRotationOfPoint;
+        m_saved.m_ray.m_longFrontPoint = Relocate(longSidePoint, worldPointSpace, worldRotation);
+        m_saved.m_ray.m_cornerPoint = Relocate(cornerPoint, worldPointSpace, worldRotation);
+        m_saved.m_ray.m_smallBackPoint = Relocate(shortSidePoint, worldPointSpace, worldRotation);
         m_savedContext.Invoke(m_saved);
+    }
+
+    private Vector3 Relocate(Vector3 worldPoint, Vector3 worldPointSpace, Quaternion worldRotation)
+    {
+        Eloi.RelocationUtility.GetWorldToLocal_Point(
+            worldPoint,
+            worldPointSpace,
+            worldRotation,
+            out Vector3 local);
+        return local;
+
     }
 }
 
@@ -98,7 +113,7 @@ public  static class TetrahedronUtility {
 
     public static void GetTetrahedronLongFootCoordinate(
         STRUCT_TetrahedronLongSideFootTransformPreBuild input,
-        out STRUCT_TetrahedronLongSideFootCoordinate result)
+        out STRUCT_TetraRayLit result)
     {
 
         ThreePointsTriangleDefault triangle = new ThreePointsTriangleDefault();
@@ -108,12 +123,13 @@ public  static class TetrahedronUtility {
 }
 
 /// <summary>
+/// TETRAHEDRON LONG SIDE FOOT POSITION AND ROTATION OF A TRIANGLE
 /// Make a line from the opposite corner to the longest line. From this line, you can create a front line on the bigest side of the triangle.
 /// Now that you have a top and front line, you can create a plane. From the cross section of the line, You can create a 3D space to the "right".
 /// Relocate the Unity3D world rotation and position in that space. 
 /// </summary>
 [System.Serializable]
-public struct STRUCT_TetrahedronLongSideFootCoordinate
+public struct STRUCT_TetraRayLit
 {
     /// <summary>
     /// Represent  the position from the boot a perpendicular line to the longest side of the triangle on the short side of the triangle to the right
@@ -124,18 +140,58 @@ public struct STRUCT_TetrahedronLongSideFootCoordinate
 }
 
 [System.Serializable]
-public struct STRUCT_TetrahedronLongSideFootCoordinateWithSource
+/// <summary>
+/// TETRAHEDRON LONG SIDE FOOT POSITION AND ROTATION OF A TRIANGLE WITH SOURCE
+/// </summary>
+public struct STRUCT_TetraRayLitWithWorld
 {
     public Vector3 m_worldPointA;
     public Vector3 m_worldPointB;
     public Vector3 m_worldPointC;
+    public STRUCT_TetraRayLit m_ray;
+}
+
+/// <summary>
+/// TETRAHEDRON LONG SIDE FOOT POSITION AND ROTATION OF A TRIANGLE
+/// I am a class that allows the reconstruction of a tetrahedron from a perpenddiculatr line on the longest edge of a base.
+/// It allows to store the position and quaternion rotatoin of a point located in a triangular space.
+/// </summary>
+/// 
+[System.Serializable]
+public struct STRUCT_TetraRay
+{
+
+    //Represent the front point that was with a biggest lenght use to generate the tetrafoot
+    public Vector3 m_longFrontPoint;
+    //Represent the "top" point opposed to the longest edge
+    public Vector3 m_cornerPoint;
+    // Represent the back point that was with a smallest lenght use to generate the tetrafoot
+    public Vector3 m_smallBackPoint;
+
     /// <summary>
     /// Represent  the position from the boot a perpendicular line to the longest side of the triangle on the short side of the triangle to the right
     /// </summary>
     public Vector3 m_localPositionFromFoot;
-
     public Quaternion m_localRotationFromFoot;
 }
+
+/// <summary>
+/// TETRAHEDRON LONG SIDE FOOT POSITION AND ROTATION OF A TRIANGLE WITH SOURCE
+/// </summary>
+/// 
+[System.Serializable]
+public struct STRUCT_TetraRayWithWorld {
+
+
+    public Vector3 m_worldPointA;
+    public Vector3 m_worldPointB;
+    public Vector3 m_worldPointC;
+    public STRUCT_TetraRay m_ray;
+
+    
+}
+
+
 
 
 
@@ -168,4 +224,19 @@ public struct STRUCT_TetrahedronLongSideFootTransformPreBuild
     }
 
 
+}
+
+public class ThreePointsMono_DebugDrawTetraRayWithSource : MonoBehaviour { 
+
+    public STRUCT_TetraRayWithWorld m_tetraRay;
+    public Color m_edgeColor = Color.red;
+    private void Update()
+    {
+        Debug.DrawLine(m_tetraRay.m_worldPointA, m_tetraRay.m_worldPointB, m_edgeColor, m_timeDraw);
+        Debug.DrawLine(m_tetraRay.m_worldPointB, m_tetraRay.m_worldPointC, m_edgeColor, m_timeDraw);
+        Debug.DrawLine(m_tetraRay.m_worldPointC, m_tetraRay.m_worldPointA, m_edgeColor, m_timeDraw);
+        Debug.DrawLine(m_tetraRay.m_ray.m_longFrontPoint, m_tetraRay.m_ray.m_cornerPoint, m_edgeColor, m_timeDraw);
+        Debug.DrawLine(m_tetraRay.m_ray.m_longFrontPoint, m_tetraRay.m_ray.m_smallBackPoint, m_edgeColor, m_timeDraw);
+        Debug.DrawLine(m_tetraRay.m_ray.m_cornerPoint, m_tetraRay.m_ray.m_smallBackPoint, m_edgeColor, m_timeDraw);
+    }
 }
