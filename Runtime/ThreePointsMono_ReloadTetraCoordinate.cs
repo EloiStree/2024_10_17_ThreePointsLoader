@@ -31,8 +31,8 @@ public class ThreePointsMono_ReloadTetraCoordinate : MonoBehaviour {
         Quaternion forwardRotationSpace = Quaternion.LookRotation(forwardDirection, Vector3.up);
         Vector3 worldPointSpace = footPoint;
         Eloi.RelocationUtility.GetLocalToWorld_DirectionalPoint(
-           input.m_localPositionFromFoot,
-           input.m_localRotationFromFoot,
+           input.m_ray.m_localPositionFromFoot,
+           input.m_ray.m_localRotationFromFoot,
            worldPointSpace,
            forwardRotationSpace,
            out Vector3 worldPosition,

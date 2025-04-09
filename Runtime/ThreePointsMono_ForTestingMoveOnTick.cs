@@ -25,8 +25,9 @@ public class ThreePointsMono_ForTestingMoveOnTick : MonoBehaviour {
             return;
         
         m_index -= 1;
-        if (m_index < 0)
+        if (m_index < 0) { 
             m_index = m_listOfPoints.Length-1;
+        }
         MoveToIndex();
 
     }
@@ -34,8 +35,10 @@ public class ThreePointsMono_ForTestingMoveOnTick : MonoBehaviour {
     [ContextMenu("Move To Index")]
     private void MoveToIndex()
     {
-        if (m_whatToMove == null) return;
-        if (m_listOfPoints.Length<=0) return;
+        if (m_whatToMove == null) 
+            return;
+        if (m_listOfPoints.Length<=0)
+            return;
         m_whatToMove.transform.position = m_listOfPoints[m_index].position;
         if (m_useRotation)
             m_whatToMove.transform.rotation = m_listOfPoints[m_index].rotation;

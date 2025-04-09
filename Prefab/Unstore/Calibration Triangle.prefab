@@ -1,0 +1,788 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2060512147352255005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8071817719578230358}
+  - component: {fileID: 4947559000964515368}
+  - component: {fileID: 7192051380939445697}
+  - component: {fileID: 4175607928885529561}
+  m_Layer: 0
+  m_Name: Register
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8071817719578230358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060512147352255005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4494279061698920175}
+  - {fileID: 529235239097817052}
+  m_Father: {fileID: 5102891617783578235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4947559000964515368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060512147352255005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d806bc5697d01544ca0f4b3b6d0d2f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_register:
+    m_dataBaseGuid: 1d6dc2bc-e25d-45ec-9268-0d68ec6c4d75
+    m_listTetraRay: []
+    m_similarityThresholdMeter: 0.05
+    m_similarityThresholdDegree: 5
+--- !u!114 &7192051380939445697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060512147352255005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3e1361366024a48bf62e60456b326c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_register: {fileID: 4947559000964515368}
+  m_pathRelativeFolder: tetraray_register
+  m_useEnable: 1
+--- !u!114 &4175607928885529561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060512147352255005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e058a6b524fe74895f03950536a098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_register: {fileID: 4947559000964515368}
+  m_debugDrawAll: 0
+  m_debugDrawSelected: 0
+  m_index: 0
+--- !u!1 &2536998173024066847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4494279061698920175}
+  - component: {fileID: 4100207337382751295}
+  - component: {fileID: 3721794733357978954}
+  m_Layer: 0
+  m_Name: Reload From Register
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4494279061698920175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536998173024066847}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.924062, y: 2.3684387, z: 0.2554617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1574275584007890489}
+  m_Father: {fileID: 8071817719578230358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4100207337382751295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536998173024066847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdf09a1b40f27745b9dfef77f006fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_targetToAffect: {fileID: 0}
+  m_register: {fileID: 4947559000964515368}
+  m_lastReceived:
+    m_worldPointA: {x: 0, y: 0, z: 0}
+    m_worldPointB: {x: 0, y: 0, z: 0}
+    m_worldPointC: {x: 0, y: 0, z: 0}
+    m_worldPointFoot: {x: 0, y: 0, z: 0}
+    m_ray:
+      m_longFrontPoint: {x: 0, y: 0, z: 0}
+      m_cornerPoint: {x: 0, y: 0, z: 0}
+      m_smallBackPoint: {x: 0, y: 0, z: 0}
+      m_localPositionFromFoot: {x: 0, y: 0, z: 0}
+      m_localRotationFromFoot: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3721794733357978954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536998173024066847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7655607716b7d824083c09a80f560853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_toRelay: {fileID: 4348358222099901232}
+  m_relayEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4100207337382751295}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_TetraRayRegisterToWorldTransform,
+          be.elab.threepointsloader
+        m_MethodName: SetWith
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &3771870753380441008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702680722690689100}
+  - component: {fileID: 419632650626760253}
+  m_Layer: 0
+  m_Name: Listen To Triangle Change
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702680722690689100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771870753380441008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5102891617783578235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419632650626760253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771870753380441008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b31f70ad7404fe4c9d97855bbf5ded2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_currentState:
+    m_points:
+      m_start: {x: -8.55, y: 0, z: 5}
+      m_middle: {x: -3.17, y: 2.3, z: 2.98}
+      m_end: {x: -4.53, y: 0, z: 2.78}
+    m_distanceAndAngle:
+      m_startMiddleDistance: 6.189895
+      m_middleEndDistance: 2.6794777
+      m_startEndDistance: 4.592254
+      m_middlePointAngle: 42.62997
+      m_startPointAngle: 23.27637
+      m_endPointAngle: 114.093666
+  m_onTriangleChangeHappened:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4100207337382751295}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_TetraRayRegisterToWorldTransform,
+          be.elab.threepointsloader
+        m_MethodName: SetWith
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_currentLenght: 13.461627
+  m_previousLenght: 13.461627
+  m_changeLenght: 0.02
+--- !u!1 &3888265049595683153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3425768589269200419}
+  - component: {fileID: 4348358222099901232}
+  - component: {fileID: 5307925998871576690}
+  m_Layer: 0
+  m_Name: Calibration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3425768589269200419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888265049595683153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5556110306728809379}
+  - {fileID: 9185499997625683923}
+  - {fileID: 8283882757676003552}
+  m_Father: {fileID: 5102891617783578235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4348358222099901232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888265049595683153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea97fb01c6d58074d9618cc19a2f0448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_startPoint: {fileID: 5556110306728809379}
+  m_middlePoint: {fileID: 9185499997625683923}
+  m_endPoint: {fileID: 8283882757676003552}
+  m_triangle:
+    m_points:
+      m_start: {x: -14.3, y: 0, z: 0}
+      m_middle: {x: -15.3, y: 0, z: 0}
+      m_end: {x: -15.3, y: 0, z: 3}
+    m_distanceAndAngle:
+      m_startMiddleDistance: 1
+      m_middleEndDistance: 3
+      m_startEndDistance: 3.1622777
+      m_middlePointAngle: 90
+      m_startPointAngle: 71.56505
+      m_endPointAngle: 18.434946
+  m_onPushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 419632650626760253}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_ListenToChangeFromBordersLenght,
+          be.elab.threepointsloader
+        m_MethodName: PushInCurrentGuarianState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_pushAtStart: 0
+  m_pushAtUpdate: 0
+--- !u!114 &5307925998871576690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888265049595683153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6c2df9e1528384e92f0d6ba0401123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_source: {fileID: 4348358222099901232}
+  m_useDraw: 1
+  m_color: {r: 0, g: 1, b: 0, a: 1}
+  m_axis: {r: 1, g: 0, b: 0, a: 1}
+  m_axisLength: 0.1
+--- !u!1 &4011836217621723750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5556110306728809379}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5556110306728809379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011836217621723750}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3425768589269200419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4447088450903086648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9185499997625683923}
+  m_Layer: 0
+  m_Name: Middle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9185499997625683923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447088450903086648}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3425768589269200419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4520734142876843513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8283882757676003552}
+  m_Layer: 0
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8283882757676003552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520734142876843513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3425768589269200419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5776737131204220552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2399766256626307128}
+  - component: {fileID: 3329029538484411682}
+  - component: {fileID: 8994072918416178648}
+  m_Layer: 0
+  m_Name: Xbox Move Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2399766256626307128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776737131204220552}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5102891617783578235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3329029538484411682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776737131204220552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9939eec357ad97341a7168fcab010750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_whatToMove: {fileID: 0}
+  m_moveLeftToRight: 0
+  m_moveBackToFront: 0
+  m_rotateLeftToRight: 0
+  m_moveDownToUp: 0
+  m_rotationSpeed: 20
+  m_moveSpeed: 0.5
+  m_multiplicator: 1
+  m_onSaveRequest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1527109795310695049}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_RelayTransform3AsInterface,
+          be.elab.threepointsloader
+        m_MethodName: RelayTransform3Interface
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onLoadRequest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3721794733357978954}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_RelayTransform3AsInterface,
+          be.elab.threepointsloader
+        m_MethodName: RelayTransform3Interface
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8994072918416178648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776737131204220552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e570873370d3449b46877be13dfa38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_toAffect: {fileID: 3329029538484411682}
+  m_joystickLeft: {fileID: 4169791031446765430, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_joystickRight: {fileID: 573251786867898804, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_joystickAddSpeed: {fileID: -1669542135389554555, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_joystickRemoveSpeed: {fileID: -7437529589886795847, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_saveRequest: {fileID: 8345141935134630224, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_loadRequest: {fileID: 8516358329587551867, guid: c09ac247d6790bf49881f2dbce5e1597, type: 3}
+  m_speedIncrementation: 0.05
+  m_addingPress: 0
+  m_removePress: 0
+--- !u!1 &6788837310146954173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574275584007890489}
+  - component: {fileID: 7736717458681022196}
+  m_Layer: 0
+  m_Name: Awale Push
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1574275584007890489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788837310146954173}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.924062, y: -2.3684387, z: -0.2554617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4494279061698920175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7736717458681022196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788837310146954173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0d4345cd953224da13fd5757e4e0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3721794733357978954}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_RelayTransform3AsInterface,
+          be.elab.threepointsloader
+        m_MethodName: RelayTransform3Interface
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_fromStart: 0
+  m_fromEnable: 1
+  m_delayTimeInSeconds: 1
+--- !u!1 &8802849983279538751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5102891617783578235}
+  - component: {fileID: 8594449049821849325}
+  m_Layer: 0
+  m_Name: Calibration Triangle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5102891617783578235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802849983279538751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2399766256626307128}
+  - {fileID: 8071817719578230358}
+  - {fileID: 3425768589269200419}
+  - {fileID: 702680722690689100}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8594449049821849325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802849983279538751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1ebc61c0924ff489bd1b8f2aafe6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_note:
+    m_textNote: 'This triangle is an abstraction of the Guardian: Mesh, Points, AR,
+      Other. Turn the Guardian in a finger print tiangle identity.
+
+
+      If the
+      triangle is found in the previous DB, it is going to reload the previous level
+      rotation and placement.'
+--- !u!1 &9128245199026505447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529235239097817052}
+  - component: {fileID: 6052422259420358044}
+  - component: {fileID: 1527109795310695049}
+  m_Layer: 0
+  m_Name: Save To Register
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &529235239097817052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128245199026505447}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8071817719578230358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6052422259420358044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128245199026505447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c00b3efe7022f44d97312825bcf0188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_targetToAffect: {fileID: 0}
+  m_currentState:
+    m_points:
+      m_start: {x: 0, y: 0, z: 5}
+      m_middle: {x: 5.38, y: 2.3, z: 2.98}
+      m_end: {x: 4.02, y: 0, z: 0.91}
+    m_distanceAndAngle:
+      m_startMiddleDistance: 6.189895
+      m_middleEndDistance: 3.3800147
+      m_startEndDistance: 5.73485
+      m_middlePointAngle: 66.25252
+      m_startPointAngle: 32.648117
+      m_endPointAngle: 81.099365
+  m_saveState:
+    m_startMiddleMM: 6189
+    m_middleEndMM: 3380
+    m_startEndMM: 5734
+    m_angleStartDegree100: 3264
+    m_angleMiddleDegree100: 6625
+    m_angleEndDegree100: 8109
+  m_currentSaveState: 6189|3380|5734|3264|6625|8109
+  m_tetraRay:
+    m_worldPointA: {x: 0, y: 0, z: 5}
+    m_worldPointB: {x: 5.38, y: 2.3, z: 2.98}
+    m_worldPointC: {x: 4.02, y: 0, z: 0.91}
+    m_worldPointFoot: {x: 0, y: 0, z: 0}
+    m_ray:
+      m_longFrontPoint: {x: -4.1969414, y: -1.7942314, z: 1.5758033}
+      m_cornerPoint: {x: -0.1769414, y: -1.7942314, z: -2.5141966}
+      m_smallBackPoint: {x: 1.1830587, y: 0.50576854, z: -0.4441967}
+      m_localPositionFromFoot: {x: -4.6809306, y: 0.72098833, z: 2.6471207}
+      m_localRotationFromFoot: {x: -0.15553367, y: 0.5591423, z: -0.10773802, w: 0.8071937}
+  m_tetraRayEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4947559000964515368}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_TetraRayListRegister,
+          be.elab.threepointsloader
+        m_MethodName: SaveTetraRay
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1527109795310695049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128245199026505447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7655607716b7d824083c09a80f560853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_toRelay: {fileID: 4348358222099901232}
+  m_relayEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6052422259420358044}
+        m_TargetAssemblyTypeName: Eloi.ThreePoints.ThreePointsMono_TransformToWorldTetraRay,
+          be.elab.threepointsloader
+        m_MethodName: PushInCurrentGuarianState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
